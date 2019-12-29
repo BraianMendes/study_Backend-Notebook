@@ -1,7 +1,10 @@
 // Node.js Template API
 
+const mongoose = require('mongoose');
+
 // Using Framework Express to Routes and Views
 const express = require('express');
+// Iniciando o App
 const app = express();
 
 
