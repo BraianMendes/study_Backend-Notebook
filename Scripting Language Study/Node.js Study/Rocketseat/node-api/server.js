@@ -1,21 +1,30 @@
 // Node.js Template API
 
-const mongoose = require('mongoose');
-
 // Using Framework Express to Routes and Views
 const express = require('express');
+const cors = require('cors');
+
+const mongoose = require('mongoose');
+const requireDir = require('require-dir');
+
+
 // Starting the App
 const app = express();
+app.use(express.json());
+app.use(cors());
 
 // Starting the DB
-mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser : true });
-
+mongoose.connect(
+	'mongodb://localhost:27017/nodeapi', 
+	{ 
+		useNewUrlParser : true,
+		useUnifiedTopology: true
+	}
+);
+requireDir('./src/models');
 
 // Routes
-// First Route
-app.get('/', (req, res) => {
-	res.send('Hello World!');
-});
+app.use('/api', require('./src/routes'));
 
 // Listen to local channel 3001
 // Can access at localhost:3001
