@@ -4,11 +4,15 @@ const mongoose = require('mongoose');
 
 // Using Framework Express to Routes and Views
 const express = require('express');
-// Iniciando o App
+// Starting the App
 const app = express();
+
+// Starting the DB
+mongoose.connect('mongodb://localhost:27017/nodeapi', { useNewUrlParser : true });
 
 
 // Routes
+// First Route
 app.get('/', (req, res) => {
 	res.send('Hello World!');
 });
