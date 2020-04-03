@@ -1,0 +1,23 @@
+{
+  "name": "proj-f-ansolemo-course",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "braian"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/BraianMendes/Backend-Roadmap-Study",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
+    "jquery": "^3.4.1"
+  }
+}
