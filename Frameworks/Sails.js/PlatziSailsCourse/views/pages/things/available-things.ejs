@@ -8,8 +8,7 @@
   <button>TODO</button>
 
   <ul>
-  	<li @click="clickThing(1)">Sweet Red Drill</li>
-  	<li @click="clickThing(2)">Rad Mountain Bike</li>
+  	<li v-for="thing in things" @click="clickThing(thing.id)">{{thing.label}}</li>
   </ul>
 
 </div>
